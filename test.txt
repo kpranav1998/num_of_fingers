@@ -1,0 +1,1 @@
+/home/kpranav1998/PycharmProjects/num_fingers/test_images_gray/preyaa_gray.jpg 5
