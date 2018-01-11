@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import  cv2
 MY_DATA='/home/kpranav1998/PycharmProjects/num_fingers/test.txt'
 x_my_test,y_my_test=image_preloader(MY_DATA,mode='file',image_shape=(64,64),categorical_labels=True,normalize=True,grayscale=True)
-image=cv2.imread('/home/kpranav1998/PycharmProjects/num_fingers/test_images/preyaa6.jpeg',cv2.IMREAD_GRAYSCALE)
+image=cv2.imread('/home/kpranav1998/PycharmProjects/num_fingers/test_images/test.jpg',cv2.IMREAD_GRAYSCALE)
 image=cv2.resize(image,(300,300))
 print(image.shape)
 img = cv2.GaussianBlur(image, (7,7), 3)
@@ -17,5 +17,5 @@ ret, new = cv2.threshold(img, 25, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
 plt.imshow(new.tolist(),cmap='gray')
 plt.show(new.tolist())
-cv2.imwrite( "/home/kpranav1998/PycharmProjects/num_fingers/test_images_gray/preyaa6_gray.jpg", new )
+cv2.imwrite( "/home/kpranav1998/PycharmProjects/num_fingers/test_images_gray/test.jpg", new )
 

@@ -56,7 +56,7 @@ l2=tf.nn.relu(l1)
 
 
 l3=tf.matmul(tf.transpose(w2),l2)
-y_predicted=tf.nn.softmax(logits=tf.transpose(l3))
+y_predicted=tf.nn.softmax(logits=tf.transpose(l3),name='y_predicted')
 #cost
 cost=tf.reduce_mean(-tf.multiply(y,tf.log(y_predicted))+tf.multiply((y-1),tf.log(1-y_predicted)))
 print("5")
