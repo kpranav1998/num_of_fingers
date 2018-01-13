@@ -25,6 +25,7 @@ init=tf.global_variables_initializer()
 
 
 with tf.Session() as sess:
+    
     sess.run(init)
     new_saver = tf.train.import_meta_graph('model.ckpt.meta')
     new_saver.restore(sess, tf.train.latest_checkpoint('./'))
@@ -40,4 +41,4 @@ with tf.Session() as sess:
     y_test_temp = np.argmax(y_my_test, 1)
     y_test_temp = np.reshape(y_test_temp, newshape=[len(x_my_test), 1])
     answer = np.hstack((answer, y_test_temp))
-    print(answer)
+    print("your answer is " + str(answer[0][0]))
