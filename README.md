@@ -12,3 +12,4 @@ test_data.txt:this contains the paths of the test images
 
 run_saved_model.py:This runs the pre trained model
 
+live_feed.py: Recognizes the live feed from camera
